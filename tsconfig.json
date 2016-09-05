@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "removeComments": false,
+        "preserveConstEnums": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "noImplicitAny": true,
+        "baseUrl": "src/",
+        "sourceMap": true,
+        "declaration": true,
+        "outDir": "lib/"
+    },
+    "exclude": [
+        "node_modules"
+    ],
+    "files": [
+        "typings/index.d.ts",
+        "src/index.ts"
+    ]
+}
