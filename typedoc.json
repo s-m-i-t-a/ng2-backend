@@ -1,6 +1,6 @@
 {
   "mode": "modules",
-  "out": "doc",
+  "out": "docs",
   "readme": "none",
   "theme": "default",
   "ignoreCompilerErrors": "true",
