@@ -27,6 +27,11 @@ export type HeaderItem = string[];
 // };
 
 
+/**
+ * Check response status code and raise error when HTTP error recieved.
+ * @param response Angular 2 response
+ * @returns Angular 2 response
+ */
 export function isOk(response: Response): Response {
     if (response.status < 200 && response.status >= 300) {
         const msg = `Response status: ${response.status}`;
