@@ -27,7 +27,7 @@
     "test": "npm run lint",
     "preversion": "npm test",
     "version": "npm run build && npm run changelog",
-    "postversion": "git add -A && git commit -m \"release: v$(cat package.json | jase -- version)\" && git push && git push --tags && npm publish"
+    "postversion": "git add -A && git commit -m \"release: v$(cat package.json | jase -- version)\" && git tag \"v$(cat package.json | jase -- version)\" && git push && git push --tags && npm publish"
   },
   "repository": {
     "type": "git",
