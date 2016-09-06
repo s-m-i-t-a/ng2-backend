@@ -1,10 +1,12 @@
-<a name="0.1.1"></a>
-## 0.1.1 (2016-09-06)
+<a name="0.1.2"></a>
+## 0.1.2 (2016-09-06)
 
 * Added changelog generator ([ac03bc5](https://github.com/s-m-i-t-a/ng2-backend/commit/ac03bc5))
 * Added changelog package ([86cffb3](https://github.com/s-m-i-t-a/ng2-backend/commit/86cffb3))
 * Added docs for isOk function ([2f926c8](https://github.com/s-m-i-t-a/ng2-backend/commit/2f926c8))
+* Added git tagging ([28828ed](https://github.com/s-m-i-t-a/ng2-backend/commit/28828ed))
 * Added typescript docs generator ([646269a](https://github.com/s-m-i-t-a/ng2-backend/commit/646269a))
+* release: v0.1.1 ([ab8d828](https://github.com/s-m-i-t-a/ng2-backend/commit/ab8d828))
 
 
 
