@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "jase": "jase",
+    "changelog": "conventional-changelog -i CHANGELOG.md -s -r 0",
     "rimraf": "rimraf",
     "tsc": "tsc",
     "tslint": "tslint",
@@ -17,13 +18,15 @@
     "prebuild": "npm run clean:lib",
     "build": "npm run tsc",
     "clean": "npm cache clean && npm run rimraf -- node_modules doc typings lib",
+    "clean:docs": "npm run rimraf -- doc",
     "clean:lib": "npm run rimraf -- lib",
+    "predocs": "npm run clean:docs",
     "docs": "npm run typedoc -- --options typedoc.json --exclude '**/*.spec.ts' ./src/",
     "lint": "npm run tslint src/**/*.ts",
     "postinstall": "npm run typings -- install",
     "test": "npm run lint",
     "preversion": "npm test",
-    "version": "npm run build",
+    "version": "npm run build && npm run changelog",
     "postversion": "git add -A && git commit -m \"release: v$(cat package.json | jase -- version)\" && git push && git push --tags && npm publish"
   },
   "repository": {
@@ -44,7 +47,7 @@
   "homepage": "https://github.com/s-m-i-t-a/ng2-backend#readme",
   "devDependencies": {
     "jase": "^1.2.0",
-    "typedoc": "^0.4.2",
+    "typedoc": "https://github.com/zakhenry/typedoc/releases/download/v0.4.6/typedoc-0.4.6.tgz",
     "rimraf": "^2.5.2",
     "tslint": "^3.15.1",
     "typescript": "^2.0.2",
