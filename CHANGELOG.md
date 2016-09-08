@@ -1,6 +1,14 @@
+<a name="0.1.4"></a>
+## 0.1.4 (2016-09-08)
+
+* Fixed documentation hosting and generation ([a9b1a3a](https://github.com/s-m-i-t-a/ng2-backend/commit/a9b1a3a))
+
+
+
 <a name="0.1.3"></a>
 ## 0.1.3 (2016-09-06)
 
+* release: v0.1.3 ([8a20bdb](https://github.com/s-m-i-t-a/ng2-backend/commit/8a20bdb))
 * Added base readme ([b22e22b](https://github.com/s-m-i-t-a/ng2-backend/commit/b22e22b))
 * Added docs generation ([c1536b3](https://github.com/s-m-i-t-a/ng2-backend/commit/c1536b3))
 
