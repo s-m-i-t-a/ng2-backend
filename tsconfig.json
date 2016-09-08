@@ -1,6 +1,8 @@
 {
     "compilerOptions": {
         "module": "commonjs",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
         "target": "es5",
         "removeComments": false,
         "preserveConstEnums": true,
