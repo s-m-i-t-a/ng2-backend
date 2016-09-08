@@ -9,12 +9,14 @@
   ],
   "scripts": {
     "jase": "jase",
-    "changelog": "conventional-changelog -i CHANGELOG.md -s -r 0",
     "rimraf": "rimraf",
     "tsc": "tsc",
     "tslint": "tslint",
     "typedoc": "typedoc",
     "typings": "typings",
+    "changelog": "conventional-changelog -i CHANGELOG.md -s -r 0",
+    "pregh-pages": "git push origin :gh-pages",
+    "gh-pages": "git subtree push --prefix docs origin gh-pages",
     "prebuild": "npm run clean:lib",
     "build": "npm run tsc",
     "clean": "npm cache clean && npm run rimraf -- node_modules docs typings lib",
@@ -22,12 +24,13 @@
     "clean:lib": "npm run rimraf -- lib",
     "predocs": "npm run clean:docs",
     "docs": "npm run typedoc -- --options typedoc.json --exclude '**/*.spec.ts' ./src/",
+    "postdocs": "touch docs/.nojekyll",
     "lint": "npm run tslint src/**/*.ts",
     "postinstall": "npm run typings -- install",
     "test": "npm run lint",
     "preversion": "npm test",
     "version": "npm run build && npm run docs && npm run changelog",
-    "postversion": "git add -A && git commit -m \"release: v$(cat package.json | jase -- version)\" && git tag \"v$(cat package.json | jase -- version)\" && git push && git push --tags && npm publish"
+    "postversion": "git add -A && git commit -m \"release: v$(cat package.json | jase -- version)\" && git tag \"v$(cat package.json | jase -- version)\" && git push && git push --tags && npm run gh-pages && npm publish"
   },
   "repository": {
     "type": "git",
