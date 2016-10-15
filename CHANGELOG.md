@@ -1,6 +1,14 @@
+<a name="0.1.6"></a>
+## 0.1.6 (2016-10-15)
+
+* fix(transpiler): Include source in source maps ([936c3c0](https://github.com/s-m-i-t-a/ng2-backend/commit/936c3c0))
+
+
+
 <a name="0.1.5"></a>
 ## 0.1.5 (2016-10-15)
 
+* release: v0.1.5 ([4e3d4a7](https://github.com/s-m-i-t-a/ng2-backend/commit/4e3d4a7))
 * feature(settings): Update package dependencies ([6f4ca96](https://github.com/s-m-i-t-a/ng2-backend/commit/6f4ca96))
 * Added backend service ([f625903](https://github.com/s-m-i-t-a/ng2-backend/commit/f625903))
 * Added backend service provider ([16ab521](https://github.com/s-m-i-t-a/ng2-backend/commit/16ab521))
