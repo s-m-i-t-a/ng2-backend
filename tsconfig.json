@@ -10,6 +10,7 @@
         "noImplicitAny": true,
         "baseUrl": "src/",
         "sourceMap": true,
+        "inlineSources": true,
         "declaration": true,
         "outDir": "lib/"
     },
