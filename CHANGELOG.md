@@ -1,6 +1,18 @@
+<a name="0.1.5"></a>
+## 0.1.5 (2016-10-15)
+
+* feature(settings): Update package dependencies ([6f4ca96](https://github.com/s-m-i-t-a/ng2-backend/commit/6f4ca96))
+* Added backend service ([f625903](https://github.com/s-m-i-t-a/ng2-backend/commit/f625903))
+* Added backend service provider ([16ab521](https://github.com/s-m-i-t-a/ng2-backend/commit/16ab521))
+* Added emit decorators settings for compilator ([9f2fa42](https://github.com/s-m-i-t-a/ng2-backend/commit/9f2fa42))
+* Added import from package option ([a89d165](https://github.com/s-m-i-t-a/ng2-backend/commit/a89d165))
+
+
+
 <a name="0.1.4"></a>
 ## 0.1.4 (2016-09-08)
 
+* release: v0.1.4 ([03f17a9](https://github.com/s-m-i-t-a/ng2-backend/commit/03f17a9))
 * Fixed documentation hosting and generation ([a9b1a3a](https://github.com/s-m-i-t-a/ng2-backend/commit/a9b1a3a))
 
 
