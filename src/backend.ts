@@ -1,4 +1,4 @@
-import { Http, RequestOptionsArgs, Response } from '@angular/http';
+import { Http, RequestOptionsArgs, Response, Headers } from '@angular/http';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
@@ -12,11 +12,7 @@ export class BackendService {
     }
 
     get(url: string, options?: RequestOptionsArgs): Observable<Response|Error> {
-        const opts = {
-            headers: headers([
-                jsonContentHeader()
-            ])
-        };
+        let opts : RequestOptionsArgs = this.expandWithDefaultOptions(options);
 
         return this._http.get(`${this._baseApiUrl}${url}`, opts)
             .map(isOk)
@@ -24,11 +20,7 @@ export class BackendService {
     }
 
     post(url: string, body: string, options?: RequestOptionsArgs): Observable<Response|Error> {
-        const opts = {
-            headers: headers([
-                jsonContentHeader()
-            ])
-        };
+        let opts : RequestOptionsArgs = this.expandWithDefaultOptions(options);
 
         return this._http.post(`${this._baseApiUrl}${url}`, body, opts)
             .map(isOk)
@@ -36,11 +28,7 @@ export class BackendService {
     }
 
     put(url: string, body: string, options?: RequestOptionsArgs): Observable<Response|Error> {
-        const opts = {
-            headers: headers([
-                jsonContentHeader()
-            ])
-        };
+        let opts : RequestOptionsArgs = this.expandWithDefaultOptions(options);
 
         return this._http.put(`${this._baseApiUrl}${url}`, body, opts)
             .map(isOk)
@@ -48,11 +36,7 @@ export class BackendService {
     }
 
     delete(url: string, options?: RequestOptionsArgs): Observable<Response|Error> {
-        const opts = {
-            headers: headers([
-                jsonContentHeader()
-            ])
-        };
+        let opts : RequestOptionsArgs = this.expandWithDefaultOptions(options);
 
         return this._http.delete(`${this._baseApiUrl}${url}`, opts)
             .map(isOk)
@@ -60,11 +44,7 @@ export class BackendService {
     }
 
     patch(url: string, body: string, options?: RequestOptionsArgs): Observable<Response|Error> {
-        const opts = {
-            headers: headers([
-                jsonContentHeader()
-            ])
-        };
+        let opts : RequestOptionsArgs = this.expandWithDefaultOptions(options);
 
         return this._http.patch(`${this._baseApiUrl}${url}`, body, opts)
             .map(isOk)
@@ -72,14 +52,21 @@ export class BackendService {
     }
 
     head(url: string, options?: RequestOptionsArgs): Observable<Response|Error> {
-        const opts = {
-            headers: headers([
-                jsonContentHeader()
-            ])
-        };
+        let opts : RequestOptionsArgs = this.expandWithDefaultOptions(options);
 
         return this._http.head(`${this._baseApiUrl}${url}`, opts)
             .map(isOk)
             .catch(handleError);
+    }
+
+    private expandWithDefaultOptions (options : RequestOptionsArgs) : RequestOptionsArgs {
+        if (!options) {
+            options = {};
+        }
+        if (!options.headers) {
+            options.headers = new Headers();
+        }
+        options.headers.append('Content-Type', 'application/json');
+        return options;
     }
 }
