@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
-import { isOk, handleError, headers, jsonContentHeader } from './utils';
+import { isOk, handleError } from './utils';
 
 
 export class BackendService {
